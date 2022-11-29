@@ -80,7 +80,10 @@
             <artifactId>c3p0</artifactId>
             <version>0.9.5.2</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-orm -->
+        <!-- <table> — тег для создания таблицы.
+        <tr> — строка таблицы
+        <th> — заголовок столбца
+        <td> — ячейка таблицы -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-orm</artifactId>

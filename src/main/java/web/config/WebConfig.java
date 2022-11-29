@@ -11,9 +11,9 @@ import org.thymeleaf.spring5.SpringTemplateEngine;
 import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 
-@Configuration
-@EnableWebMvc
-@ComponentScan("web")
+@Configuration //@Configuration сообщает Spring что данный класс является конфигурационным и содержит определения и зависимости bean-компоненто
+@EnableWebMvc  //@EnableWebMvc позволяет импортировать конфигурацию Spring MVC из класса WebMvcConfigurationSupport.
+@ComponentScan("web")  // сообщает Spring где искать компоненты, которыми он должен управлять, т.е. классы, помеченные аннотацией @Component или ее производными, такими как @Controller, @Repository, @Service. Эти аннотации автоматически определяют бин класса.
 public class WebConfig implements WebMvcConfigurer {
 
     private final ApplicationContext applicationContext;
@@ -22,7 +22,7 @@ public class WebConfig implements WebMvcConfigurer {
         this.applicationContext = applicationContext;
     }
 
-
+//Resolver, это такой интерфейс, необходимый для нахождения представления по имени
     @Bean
     public SpringResourceTemplateResolver templateResolver() {
         SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
