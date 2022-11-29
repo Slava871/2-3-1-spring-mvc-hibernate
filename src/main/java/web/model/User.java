@@ -5,9 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "table_kata_usr")
+@Table(name = "users")
 public class User {
-
    @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
    @Column(name = "id")
@@ -16,10 +15,8 @@ public class User {
    @Column(name = "name")
    private String firstName;
 
-   @Column(name = "last_name")
+   @Column(name = "surname")
    private String lastName;
-
-
 
    public User() {}
    

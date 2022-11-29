@@ -11,5 +11,4 @@ public interface UserDao {
     void delete(int id);
     void edit(User user, int id);
     User getById(int id);
-
 }
