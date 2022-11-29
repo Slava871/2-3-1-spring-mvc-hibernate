@@ -28,7 +28,11 @@ public class UserController {
 //        list1.add(us4);
 //    }
 
-    private UserService userService = new UserServiceImpl();
+    private UserService userService;
+    @Autowired
+    public void setUserService(UserService userService) {
+        this.userService = userService;
+    }
 
     //shows all users
     @GetMapping(value ="/users")

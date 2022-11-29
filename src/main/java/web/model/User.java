@@ -4,19 +4,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.*;
 
-//@Entity
-//@Table(name = "users")
+@Entity
+@Table(name = "table_kata_usr")
 public class User {
 
-//   @Id
-//   @GeneratedValue(strategy = GenerationType.IDENTITY)
-//   @Column(name = "id")
+   @Id
+   @GeneratedValue(strategy = GenerationType.IDENTITY)
+   @Column(name = "id")
    private int id;
 
-//   @Column(name = "name")
+   @Column(name = "name")
    private String firstName;
 
-//   @Column(name = "last_name")
+   @Column(name = "last_name")
    private String lastName;
 
 
