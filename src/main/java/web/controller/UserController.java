@@ -30,20 +30,14 @@ public class UserController {
 
     private UserService userService = new UserServiceImpl();
 
-
+    //shows all users
     @GetMapping(value ="/users")
-    public String showTestUser(@RequestParam(value = "count", required = false) Integer count,
-                              Model model) {
-        if(count == null){
-            List<User> totalList = userService.allUsers();
-            model.addAttribute("totalList", totalList);
-            return "allUsers";
-        }
-//        List<User> totalList2 = carService.getSomeCars(count);
-//        model.addAttribute("totalList2", totalList2);
-
-        return "anyUser";
+    public String showAllUsers(Model model) {
+        List<User> totalList = userService.allUsers();
+        model.addAttribute("totalList", totalList);
+        return "allUsers";
     }
+
 
     //edit user
     @GetMapping(value ="/users/edit/{id}")
